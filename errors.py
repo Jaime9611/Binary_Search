@@ -16,7 +16,7 @@ class NotSameTypeError(Error):
 
 def check_sample(sample):
     """Function for test if it is a ordered list."""
-    
+
     options = [_check_if_equal_types, _check_if_sorted]
 
     for f in options:
@@ -24,11 +24,15 @@ def check_sample(sample):
 
 
 def _check_if_sorted(sample):
+    """Raise an error if the list is not ordered."""
+
     if sorted(sample) != sample:
         raise NotOrderedListError("The list given isn't ordered.")
 
 
 def _check_if_equal_types(sample):
+    """Raise an error if the list has items of different type."""
+
     type_sample = type(sample[0])
 
     test = all(isinstance(item, type_sample) for item in sample)

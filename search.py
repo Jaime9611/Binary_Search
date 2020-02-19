@@ -30,14 +30,3 @@ def binary_search(target, sample):
         return "Number wasn't found in the list."
     else:
         return found_position
-
-
-if __name__ == "__main__":
-    l = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 
-         43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97] # lista de prueba
-    n = ['Carlos', 1, 'Pedro', 'Jessica', 'Jaime', 'Tom', 'Brayan']
-
-    res = binary_search(67, l)
-    print(res)
-    if type(res) == int:
-        print(l[res])
